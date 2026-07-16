@@ -118,39 +118,33 @@ body{
 }
 
 .logoCircle{
-.logoCircle{
 
     width:100px;
     height:100px;
 
-    margin:0 auto 22px;
+    margin:0 auto 20px;
+
+    border-radius:25px;
+
+    overflow:hidden;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    border-radius:50%;
-
-    background:rgba(20,20,20,.6);
-
-    border:2px solid rgba(90,210,255,.4);
+    background:transparent;
 
     box-shadow:
-        0 0 25px rgba(79,195,255,.45);
-
-    overflow:hidden;
+        0 0 20px rgba(80,200,255,.5);
 
 }
 
 .logoCircle img{
 
-    width:75%;
-    height:75%;
+    width:100%;
+    height:100%;
 
-    object-fit:contain;
-
-    user-select:none;
-    pointer-events:none;
+    object-fit:cover;
 
 }
 
