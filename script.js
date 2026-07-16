@@ -1,4 +1,3 @@
-console.log("SCRIPT MOI DA DUOC TAI");
 /* ===========================
         ThienPremiumIos
 =========================== */
