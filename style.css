@@ -774,3 +774,66 @@ body{
     }
 
 }
+/* ===========================
+        Sakura Effect
+=========================== */
+
+#petals{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    top:-40px;
+
+    width:18px;
+    height:18px;
+
+    background:linear-gradient(135deg,#ffd0e8,#ff7ec8);
+
+    border-radius:70% 30% 70% 30%;
+
+    opacity:.9;
+
+    filter:drop-shadow(0 0 8px #ff8ad8);
+
+    animation:fall linear forwards;
+
+}
+
+@keyframes fall{
+
+    0%{
+
+        transform:
+        translateY(-50px)
+        rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(120vh)
+        translateX(120px)
+        rotate(720deg);
+
+    }
+
+}
