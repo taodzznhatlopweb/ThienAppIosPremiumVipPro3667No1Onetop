@@ -179,4 +179,4 @@ function createPetal(){
 
 }
 
-setInterval(createPetal,250);
+setInterval(createPetal,800);
