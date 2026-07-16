@@ -118,30 +118,38 @@ body{
 }
 
 .logoCircle{
+.logoCircle{
 
-    width:90px;
-    height:90px;
+    width:100px;
+    height:100px;
 
     margin:auto;
 
     border-radius:50%;
 
+    overflow:hidden;
+
+    background:transparent;
+
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
-    font-size:32px;
-
-    font-weight:bold;
-
-    color:#fff;
-
-    background:
-    linear-gradient(135deg,#5bcfff,#368eff);
-
     box-shadow:
-    0 0 25px rgba(91,207,255,.8);
+        0 0 25px rgba(79,195,255,.5);
+
+}
+
+.logoCircle img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
 
 }
 
