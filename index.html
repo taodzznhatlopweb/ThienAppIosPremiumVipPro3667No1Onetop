@@ -169,29 +169,18 @@
 
 <div id="loadingPage" class="page hidden">
 
-<div class="terminal">
+    <div class="terminal">
 
-<div class="terminalTitle">
+        <div class="terminalTitle">
+            Running...
+        </div>
 
-Running...
+        <pre id="terminalOutput"></pre>
 
-</div>
+        <button id="finishButton" class="hidden">
+            Xong
+        </button>
 
-terminalOutput.innerHTML += logs[index] + "<br>";
-
-<button
-id="finishButton"
-class="hidden">
-
-Xong
-
-</button>
+    </div>
 
 </div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
