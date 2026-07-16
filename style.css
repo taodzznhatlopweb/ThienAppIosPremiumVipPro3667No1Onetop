@@ -1,0 +1,660 @@
+/* ==========================================
+            ThienPremiumIos
+        Premium iOS Interface
+========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",
+Segoe UI,Roboto,sans-serif;
+}
+
+html,body{
+
+width:100%;
+height:100%;
+
+background:#0c0c0c;
+
+overflow:hidden;
+
+color:white;
+
+}
+
+/* BACKGROUND */
+
+body{
+
+background:
+
+radial-gradient(circle at top,
+#4fc3ff33,
+transparent 40%),
+
+linear-gradient(
+
+180deg,
+
+#1b1b1b,
+
+#0f0f0f,
+
+#070707
+
+);
+
+}
+
+/* Glow */
+
+#backgroundGlow{
+
+position:fixed;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:600px;
+height:600px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+
+rgba(79,195,255,.25),
+
+transparent 70%);
+
+filter:blur(90px);
+
+animation:glow 5s infinite alternate;
+
+z-index:-1;
+
+}
+
+@keyframes glow{
+
+0%{
+
+transform:
+
+translate(-50%,-50%)
+
+scale(.9);
+
+opacity:.5;
+
+}
+
+100%{
+
+transform:
+
+translate(-50%,-50%)
+
+scale(1.15);
+
+opacity:1;
+
+}
+
+}
+
+/* ========================= */
+
+.page{
+
+width:100%;
+height:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+/* LOGIN */
+
+.loginBox{
+
+width:100%;
+max-width:420px;
+
+background:
+
+rgba(35,35,35,.75);
+
+backdrop-filter:
+
+blur(25px);
+
+border:
+
+1px solid rgba(255,255,255,.08);
+
+border-radius:28px;
+
+padding:35px;
+
+box-shadow:
+
+0 0 40px rgba(79,195,255,.18);
+
+animation:fade .8s;
+
+}
+
+.logoCircle{
+
+width:90px;
+
+height:90px;
+
+border-radius:50%;
+
+margin:auto;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+font-weight:700;
+
+background:
+
+linear-gradient(
+
+145deg,
+
+#61d4ff,
+
+#2d8dff);
+
+box-shadow:
+
+0 0 25px #4fc3ff;
+
+margin-bottom:20px;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:34px;
+
+font-weight:700;
+
+margin-bottom:8px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+color:#9dcfff;
+
+margin-bottom:25px;
+
+font-size:16px;
+
+}
+
+#keyInput{
+
+width:100%;
+
+padding:15px;
+
+border-radius:18px;
+
+background:#1d1d1d;
+
+border:
+
+1px solid #3b4c56;
+
+color:white;
+
+outline:none;
+
+font-size:16px;
+
+transition:.3s;
+
+}
+
+#keyInput:focus{
+
+border-color:#61d4ff;
+
+box-shadow:
+
+0 0 15px
+
+rgba(97,212,255,.6);
+
+}
+
+#loginBtn{
+
+margin-top:20px;
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:18px;
+
+font-size:17px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#5dd0ff,
+
+#379cff);
+
+color:white;
+
+box-shadow:
+
+0 0 25px
+
+rgba(93,208,255,.5);
+
+transition:.25s;
+
+}
+
+#loginBtn:hover{
+
+transform:scale(1.03);
+
+box-shadow:
+
+0 0 40px
+
+rgba(93,208,255,.8);
+
+}
+
+#loginStatus{
+
+margin-top:15px;
+
+text-align:center;
+
+font-size:14px;
+
+color:#ff7373;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0);
+
+}
+
+}
+/* ===========================
+        MAIN CARD
+=========================== */
+
+.mainCard{
+
+    width:100%;
+    max-width:480px;
+
+    background:rgba(32,32,32,.72);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+    padding:28px;
+
+    box-shadow:
+    0 0 35px rgba(90,190,255,.18);
+
+    animation:fade .6s;
+
+}
+
+.mainTitle{
+
+    text-align:center;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+.mainSub{
+
+    text-align:center;
+
+    margin-top:8px;
+    margin-bottom:28px;
+
+    color:#87d9ff;
+
+}
+
+/* ===========================
+        SWITCHES
+=========================== */
+
+.switchContainer{
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+
+}
+
+.switchItem{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#1a1a1a;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:18px;
+
+    padding:14px 16px;
+
+    transition:.25s;
+
+}
+
+.switchItem:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 18px rgba(90,190,255,.18);
+
+}
+
+.switchItem span{
+
+    color:#fff;
+
+    font-size:16px;
+
+}
+
+/* ===========================
+        IOS SWITCH
+=========================== */
+
+.switch{
+
+    position:relative;
+
+    width:58px;
+
+    height:32px;
+
+}
+
+.switch input{
+
+    display:none;
+
+}
+
+.slider{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#555;
+
+    border-radius:999px;
+
+    transition:.25s;
+
+}
+
+.slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:24px;
+
+    height:24px;
+
+    left:4px;
+
+    top:4px;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    transition:.25s;
+
+}
+
+.switch input:checked + .slider{
+
+    background:#62cfff;
+
+    box-shadow:
+    0 0 18px rgba(98,207,255,.8);
+
+}
+
+.switch input:checked + .slider::before{
+
+    transform:translateX(26px);
+
+}
+
+/* ===========================
+        FPS
+=========================== */
+
+.fpsBox{
+
+    margin-top:28px;
+
+}
+
+.fpsText{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+    color:#8ed8ff;
+
+    font-weight:600;
+
+}
+
+#fpsSlider{
+
+    width:100%;
+
+    accent-color:#62cfff;
+
+}
+/* ===========================
+        ACTION BUTTON
+=========================== */
+
+#startButton{
+
+    width:100%;
+
+    margin-top:28px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    color:white;
+
+    background:linear-gradient(
+        90deg,
+        #5bcfff,
+        #3d9cff
+    );
+
+    transition:.25s;
+
+    box-shadow:
+    0 0 18px rgba(91,207,255,.45);
+
+}
+
+#startButton:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 0 30px rgba(91,207,255,.7);
+
+}
+
+#startButton:active{
+
+    transform:scale(.98);
+
+}
+
+/* ===========================
+        LOADING PAGE
+=========================== */
+
+#loadingPage{
+
+    background:#090909;
+
+}
+
+.terminal{
+
+    width:100%;
+    max-width:600px;
+
+    background:#151515;
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:24px;
+
+    box-shadow:
+        0 0 35px rgba(91,207,255,.15);
+
+}
+
+.terminalTitle{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#77d8ff;
+
+    margin-bottom:16px;
+
+}
+
+#terminalOutput{
+
+    background:#0f0f0f;
+
+    border-radius:14px;
+
+    padding:16px;
+
+    min-height:260px;
+
+    max-height:260px;
+
+    overflow:auto;
+
+    color:#7ef8b4;
+
+    font-size:14px;
+
+   
