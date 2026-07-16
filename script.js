@@ -113,7 +113,7 @@ function startLoading(){
 
     const timer = setInterval(()=>{
 
-        terminalOutput.innerHTML += logs[index] + "\\n";
+        terminalOutput.textContent += logs[index] + "\n";
 
         terminalOutput.scrollTop = terminalOutput.scrollHeight;
 
