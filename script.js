@@ -21,6 +21,8 @@ const terminalOutput = document.getElementById("terminalOutput");
 
 const finishButton = document.getElementById("finishButton");
 
+const loadingFill = document.getElementById("loadingFill");
+const loadingPercent = document.getElementById("loadingPercent");
 /* ===========================
         AUTO LOGIN
 =========================== */
@@ -89,49 +91,86 @@ startButton.onclick = () => {
         LOADING
 =========================== */
 
-const logs = [
+const logs = [];
 
-"Starting application...",
-"Checking local resources...",
-"Loading interface...",
-"Initializing modules...",
-"Preparing graphics...",
-"Loading assets...",
-"Verifying configuration...",
-"Connecting components...",
-"Applying preferences...",
-"Optimizing performance...",
-"Rendering interface...",
-"Finalizing startup...",
-"Application ready."
+for(let i=1;i<=120;i++){
 
-];
+    const list=[
+
+        "[INFO] Loading Premium Modules...",
+        "[INFO] Initializing Interface...",
+        "[INFO] Checking Resources...",
+        "[INFO] Loading UI Components...",
+        "[INFO] Applying Theme...",
+        "[INFO] Optimizing Memory...",
+        "[INFO] Optimizing Performance...",
+        "[INFO] Building Dashboard...",
+        "[INFO] Rendering Effects...",
+        "[INFO] Loading Animations...",
+        "[INFO] Synchronizing Components...",
+        "[INFO] Verifying Files...",
+        "[INFO] Preparing Runtime...",
+        "[INFO] Starting Services...",
+        "[INFO] Final Optimization..."
+
+    ];
+
+    logs.push(list[Math.floor(Math.random()*list.length)]+"  #"+i);
+
+}
+
+logs.push("[SUCCESS] Premium Interface Ready.");
+logs.push("[SUCCESS] Welcome To ThienPremiumIos.");
 
 function startLoading(){
 
-    let index = 0;
+    terminalOutput.textContent="";
 
-    const timer = setInterval(()=>{
+    loadingFill.style.width="0%";
 
-        terminalOutput.textContent += logs[index] + "\n";
+    loadingPercent.textContent="0%";
 
-        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    finishButton.classList.add("hidden");
+
+    let index=0;
+
+    const total=logs.length;
+
+    const timer=setInterval(()=>{
+
+        terminalOutput.textContent+=logs[index]+"\n";
+
+        terminalOutput.scrollTop=terminalOutput.scrollHeight;
 
         index++;
 
-        if(index >= logs.length){
+        const percent=Math.floor(index/total*100);
+
+        loadingFill.style.width=percent+"%";
+
+        loadingPercent.textContent=percent+"%";
+
+        if(index>=total){
 
             clearInterval(timer);
 
-            setTimeout(()=>{
+            loadingFill.style.width="100%";
 
-                finishButton.classList.remove("hidden");
+            loadingPercent.textContent="100%";
 
-            },1000);
+            terminalOutput.textContent+="\n";
+
+            terminalOutput.textContent+="====================================\n";
+
+            terminalOutput.textContent+=" Premium Interface Loaded\n";
+
+            terminalOutput.textContent+="====================================\n";
+
+            finishButton.classList.remove("hidden");
 
         }
 
-    },1200);
+    },240);
 
 }
 
